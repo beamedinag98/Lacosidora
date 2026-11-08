@@ -108,3 +108,63 @@ body[data-page="space"] main>#espacio,
 body[data-page="space"] main>#contacto{animation:page-in .25s ease both}
 @keyframes page-in{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:650px){.site-header nav{flex-wrap:wrap}.site-header nav a{padding:8px 10px}}
+
+
+/* Identidad visual renovada: lino, tonos cálidos y detalles artesanales */
+:root{
+ --cream:#f6eee7;--paper:#fbf7f1;--rose:#d7a0a5;--rose-dark:#a95d68;
+ --wine:#702f3b;--teal:#456f65;--ink:#393632;--muted:#756b63;--line:#e6d8cb;
+}
+body{
+ background-color:#f8f2ea;
+ background-image:radial-gradient(ellipse at 12% 8%,rgba(218,177,166,.13),transparent 34%),
+ radial-gradient(ellipse at 88% 38%,rgba(115,151,132,.10),transparent 30%),
+ repeating-linear-gradient(0deg,rgba(116,91,71,.018) 0,rgba(116,91,71,.018) 1px,transparent 1px,transparent 5px);
+}
+.site-header{
+ background:rgba(255,251,246,.96);border-bottom:1px solid #e8d9cd;
+ box-shadow:0 5px 22px rgba(79,54,42,.045);backdrop-filter:blur(8px)
+}
+.site-header nav a{color:#65434a}
+.site-header nav a:hover{background:#f3e5df;color:var(--wine)}
+.site-header nav a.active,.site-header nav a[aria-current="page"]{background:var(--teal);color:#fff}
+.hero{
+ min-height:560px;
+ background:linear-gradient(110deg,rgba(255,250,244,.94),rgba(250,239,232,.84)),
+ radial-gradient(ellipse at 18% 80%,#e8c9c2 0,transparent 36%),
+ radial-gradient(ellipse at 85% 20%,#d8e3d8 0,transparent 34%);
+}
+.hero:before,.hero:after{content:"";position:absolute;pointer-events:none;border:1px solid rgba(169,93,104,.24);border-radius:50%}
+.hero:before{width:390px;height:390px;left:-180px;top:-170px}
+.hero:after{width:300px;height:300px;right:-120px;bottom:-155px}
+.hero-content{padding:52px 44px;background:rgba(255,253,249,.72);border:1px solid rgba(230,216,203,.85);border-radius:48% 48% 18px 18px;box-shadow:0 18px 55px rgba(91,59,50,.07)}
+.hero h1{letter-spacing:-.035em}
+.hero-copy{font-size:1.12rem}
+.button{border-radius:30px;box-shadow:0 6px 15px rgba(112,47,59,.14)}
+.section-wrap{position:relative}
+.intro{padding:76px 34px;margin-top:26px;margin-bottom:20px;background:rgba(255,252,247,.78);border:1px solid #eaded2;border-radius:22px}
+.services{padding-top:70px;padding-bottom:82px}
+.service-card{background:rgba(255,252,247,.88);border:1px solid #e8d9cd;border-radius:16px;box-shadow:0 8px 24px rgba(85,58,46,.045);transition:transform .2s,box-shadow .2s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(85,58,46,.09)}
+.service-icon{background:#f2e2df;color:#a45e68}
+.courses{background:rgba(255,251,246,.72);border:1px solid #e9dbcf;border-radius:24px;padding-left:clamp(16px,3vw,36px);padding-right:clamp(16px,3vw,36px);margin-bottom:70px}
+.agenda-calendar,.agenda-detail,.adult-sewing,.past-workshops{border-radius:16px;box-shadow:0 12px 30px rgba(85,58,46,.06)}
+.agenda-calendar{background:#fffaf4}
+.agenda-day{border-radius:8px}
+.past-card{border-radius:14px;box-shadow:0 10px 26px rgba(85,58,46,.07);transition:transform .2s,box-shadow .2s}
+.past-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(85,58,46,.11)}
+.past-photo{background-color:#efe2d8}
+.adult-sewing{background:#f7eee7}
+.space-section{position:relative;overflow:hidden;background:linear-gradient(120deg,#3f695f,#527c70);border-radius:0}
+.space-section:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.15);border-radius:50%;right:-130px;top:-230px;pointer-events:none}
+.space-stamp{border-color:rgba(255,230,220,.55)}
+.contact{background:rgba(255,251,246,.78);border:1px solid #e9dbcf;border-radius:22px;margin-top:70px;margin-bottom:70px;padding-left:clamp(18px,4vw,48px);padding-right:clamp(18px,4vw,48px)}
+.contact-item{background:#fffaf5}
+footer{background:#eee3d9;border-top:1px solid #dfcfc2}
+.footer-brand{color:var(--wine)}
+@media(max-width:650px){
+ .hero{min-height:490px;padding:60px 18px}
+ .hero-content{padding:42px 20px;border-radius:44% 44% 16px 16px}
+ .intro{padding:52px 20px}
+ .courses{width:calc(100% - 22px);padding-left:10px;padding-right:10px}
+}
