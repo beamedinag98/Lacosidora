@@ -1,0 +1,1 @@
+La Cosidora — web escaparate estática preparada para GitHub Pages.\n\nArchivos: index.html, styles.css, script.js y assets/logo-la-cosidora.png.\n\nPara publicar: en GitHub abre Settings > Pages, selecciona Deploy from a branch, rama main y carpeta /(root), y guarda.\n\nLa dirección se ha introducido como Calle Maestro Alfonsea, 1, bajo, según los datos facilitados.
