@@ -318,3 +318,14 @@ body{
 
 /* Integración visual del logotipo: se funde con el fondo sin recuadro blanco */
 .site-header .brand img,.footer-logo{mix-blend-mode:multiply;background:transparent}
+
+
+/* Limpieza visual: sin iconos, adornos ni estampados decorativos */
+.hero-content:before,.hero-content:after,
+.section-heading:after,.past-title:after,
+.service-card:after{display:none!important;content:none!important}
+body{background-image:none!important;background-color:#fbf5ec}
+.hero{background:linear-gradient(115deg,#fffaf3 0%,#f8eee7 55%,#f3e7df 100%)!important}
+.services,.courses,.agenda-calendar,.adult-sewing,.past-workshops,.contact,
+.service-card{background-image:none!important}
+.site-header .brand img,.footer-logo{mix-blend-mode:normal!important}
