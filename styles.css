@@ -315,3 +315,6 @@ body{
 @media(max-width:650px){
  .services,.courses,.adult-sewing,.past-workshops,.contact{background-size:auto}
 }
+
+/* Integración visual del logotipo: se funde con el fondo sin recuadro blanco */
+.site-header .brand img,.footer-logo{mix-blend-mode:multiply;background:transparent}
