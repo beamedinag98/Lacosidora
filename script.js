@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Servicios: mostrar la información dentro de esta misma página.
   const serviceInfo = {
-    arreglos: {title:"Arreglos y transformaciones",copy:"Damos una segunda vida a tus prendas con arreglos y transformaciones. Cuéntanos qué necesitas y consúltanos para valorar tu prenda."},
+    arreglos: {title:"Arreglos y transformaciones",copy:"En La Cosidora realizamos todo tipo de arreglos y transformaciones de ropa: desde pequeños ajustes hasta cambios para adaptar tus prendas a lo que necesitas. También arreglamos cortinas, cojines y otros textiles del hogar. ¿Tienes una idea o un arreglo especial en mente? Cuéntanoslo y lo valoramos contigo. No confeccionamos prendas desde cero. Para cualquier consulta, escríbenos por WhatsApp."},
     merceria: {title:"Mercería",copy:"En La Cosidora encontrarás materiales y pequeños imprescindibles para tus labores, reparaciones y proyectos de costura. Si buscas algo concreto, pregúntanos."},
     maquinas: {title:"Reparación de máquinas de coser",copy:"Te ayudamos con la reparación de máquinas de coser. Escríbenos y cuéntanos qué modelo tienes y qué problema presenta para informarte."},
     cursos: {title:"Cursos y talleres",copy:"Tenemos propuestas para aprender, practicar y disfrutar de la costura, con cursos para adultos y talleres creativos. Consulta las próximas fechas y opciones en el apartado Talleres y cursos."},
