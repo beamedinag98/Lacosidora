@@ -236,3 +236,82 @@ footer{background:linear-gradient(110deg,#eee2d5,#f5e9e1);border-top:1px solid #
  .hero-content:before{left:-10px;top:5px;font-size:2rem}
  .hero-content:after{right:-8px;bottom:5px;font-size:2rem}
 }
+
+
+/* Textiles decorativos: estampados suaves distintos por sección */
+:root{--fabric-ivory:#fbf5ec;--fabric-rose:#ead1ce;--fabric-sage:#dce6dc;--fabric-thread:rgba(112,78,67,.045)}
+body{
+ background-color:var(--fabric-ivory);
+ background-image:
+  repeating-linear-gradient(0deg,transparent 0 3px,var(--fabric-thread) 3px 4px),
+  repeating-linear-gradient(90deg,transparent 0 3px,rgba(112,78,67,.035) 3px 4px),
+  radial-gradient(ellipse at 15% 12%,rgba(226,190,181,.16),transparent 38%),
+  radial-gradient(ellipse at 88% 65%,rgba(188,207,188,.16),transparent 34%);
+}
+.hero{
+ background-color:#f8eee7;
+ background-image:
+  linear-gradient(rgba(255,250,245,.84),rgba(255,250,245,.84)),
+  repeating-linear-gradient(45deg,transparent 0 13px,rgba(169,93,104,.075) 13px 14px,transparent 14px 27px),
+  repeating-linear-gradient(-45deg,transparent 0 13px,rgba(69,111,101,.065) 13px 14px,transparent 14px 27px);
+}
+.hero:before{
+ border-color:rgba(169,93,104,.2);
+ background:radial-gradient(circle at 50% 50%,rgba(234,209,206,.18) 0 2px,transparent 3px);
+ background-size:16px 16px;
+}
+.services{
+ background-color:rgba(255,250,244,.78);
+ background-image:
+  radial-gradient(ellipse at 18px 18px,rgba(184,125,129,.11) 0 2px,transparent 2.8px),
+  radial-gradient(ellipse at 42px 42px,rgba(69,111,101,.09) 0 2px,transparent 2.8px);
+ background-size:60px 60px;
+ border-radius:24px;
+}
+.service-card{
+ background-color:rgba(255,252,247,.93);
+ background-image:repeating-linear-gradient(0deg,transparent 0 5px,rgba(112,78,67,.025) 5px 6px);
+}
+.courses{
+ background-color:#fff9f2;
+ background-image:
+  linear-gradient(rgba(255,249,242,.9),rgba(255,249,242,.9)),
+  repeating-linear-gradient(90deg,transparent 0 17px,rgba(69,111,101,.08) 17px 18px),
+  repeating-linear-gradient(0deg,transparent 0 17px,rgba(69,111,101,.08) 17px 18px);
+}
+.agenda-calendar{
+ background-color:#fffaf4;
+ background-image:
+  radial-gradient(circle at 12px 12px,rgba(183,112,116,.08) 0 1.5px,transparent 2px);
+ background-size:24px 24px;
+}
+.adult-sewing{
+ background-color:#f8eee8;
+ background-image:
+  linear-gradient(rgba(248,238,232,.88),rgba(248,238,232,.88)),
+  repeating-linear-gradient(45deg,transparent 0 11px,rgba(169,93,104,.10) 11px 12px,transparent 12px 23px);
+}
+.past-workshops{
+ background-color:#f5eee5;
+ background-image:
+  radial-gradient(circle at 14px 14px,rgba(169,93,104,.09) 0 2px,transparent 2.8px),
+  radial-gradient(circle at 42px 42px,rgba(69,111,101,.08) 0 2px,transparent 2.8px);
+ background-size:56px 56px;
+}
+.space-section{
+ background-image:
+  linear-gradient(115deg,rgba(63,105,95,.96),rgba(82,124,112,.94)),
+  repeating-linear-gradient(0deg,transparent 0 4px,rgba(255,255,255,.08) 4px 5px),
+  repeating-linear-gradient(90deg,transparent 0 4px,rgba(255,255,255,.06) 4px 5px);
+}
+.contact{
+ background-color:#fff9f3;
+ background-image:
+  linear-gradient(rgba(255,249,243,.88),rgba(255,249,243,.88)),
+  radial-gradient(circle at 16px 16px,rgba(169,93,104,.12) 0 2px,transparent 2.8px),
+  radial-gradient(circle at 44px 44px,rgba(69,111,101,.10) 0 2px,transparent 2.8px);
+ background-size:auto,60px 60px,60px 60px;
+}
+@media(max-width:650px){
+ .services,.courses,.adult-sewing,.past-workshops,.contact{background-size:auto}
+}
