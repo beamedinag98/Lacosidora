@@ -333,3 +333,38 @@ body{background-image:none!important;background-color:#fbf5ec}
 
 /* El logo original conserva su fondo blanco; el soporte coincide con él. */
 .site-header .brand img,.footer-logo{background-color:#fff!important;mix-blend-mode:normal!important}
+
+
+/* Servicios interactivos: selección y ficha desplegable en la misma página */
+.service-choice{
+  width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer;
+  display:flex;flex-direction:column;align-items:flex-start;
+}
+.service-choice h3{margin-top:0}
+.service-choice .service-more{
+  display:inline-block;margin-top:18px;color:var(--teal);
+  font-size:.78rem;font-weight:700;letter-spacing:.04em;
+}
+.service-choice:hover,.service-choice.is-selected{
+  border-color:var(--brass,#b18a55);
+  box-shadow:0 12px 28px rgba(85,58,46,.10);
+}
+.service-choice.is-selected{outline:2px solid rgba(177,138,85,.35);outline-offset:2px}
+.service-detail{
+  position:relative;display:grid;grid-template-columns:1fr auto;gap:24px;
+  margin:26px auto 0;padding:30px clamp(22px,4vw,44px);
+  background:#fffaf4;border:1px solid #e3d2bd;border-radius:16px;
+  box-shadow:0 12px 30px rgba(85,58,46,.06);
+}
+.service-detail[hidden]{display:none}
+.service-detail h3{margin:0 0 12px;color:var(--wine);font-size:clamp(1.5rem,3vw,2rem)}
+.service-detail p:not(.eyebrow){max-width:760px;color:var(--muted)}
+.service-detail-close{
+  align-self:start;border:1px solid var(--line);border-radius:50%;
+  width:36px;height:36px;background:#fff;color:var(--wine);
+  font-size:1.35rem;line-height:1;cursor:pointer;
+}
+.service-choice:focus-visible,.service-detail-close:focus-visible{
+  outline:3px solid var(--teal);outline-offset:3px;
+}
+@media(max-width:650px){.service-detail{padding:23px 18px;gap:12px}}
