@@ -168,3 +168,71 @@ footer{background:#eee3d9;border-top:1px solid #dfcfc2}
  .intro{padding:52px 20px}
  .courses{width:calc(100% - 22px);padding-left:10px;padding-right:10px}
 }
+
+
+/* Toque vintage glam: costura, latón envejecido y detalles de taller */
+:root{
+ --brass:#b18a55;
+ --brass-light:#d8bd91;
+ --ink:#38332f;
+ --wine:#713541;
+ --teal:#3f6c62;
+}
+body{
+ background-image:
+  radial-gradient(circle at 8% 14%,rgba(177,138,85,.09) 0 1px,transparent 2px),
+  radial-gradient(circle at 92% 76%,rgba(177,138,85,.08) 0 1px,transparent 2px),
+  repeating-linear-gradient(0deg,rgba(116,91,71,.018) 0,rgba(116,91,71,.018) 1px,transparent 1px,transparent 5px);
+ background-size:34px 34px,42px 42px,auto;
+}
+.hero{
+ background:
+  radial-gradient(ellipse at 13% 78%,rgba(213,160,165,.24),transparent 34%),
+  radial-gradient(ellipse at 87% 18%,rgba(177,138,85,.15),transparent 30%),
+  linear-gradient(115deg,#fffaf3 0%,#f8eee7 55%,#f3e7df 100%);
+}
+.hero-content:before,.hero-content:after{
+ position:absolute;z-index:-1;pointer-events:none;color:rgba(177,138,85,.25);
+ font-family:Georgia,serif;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1;
+}
+.hero-content:before{content:"✂";left:-54px;top:22px;transform:rotate(-24deg)}
+.hero-content:after{content:"♧";right:-45px;bottom:24px;transform:rotate(18deg)}
+.eyebrow{color:#a47c49}
+h1 em,h2 em{color:var(--teal)}
+.section-heading:after,.past-title:after{
+ content:"";display:block;width:74px;height:12px;margin:18px auto 0;
+ background:radial-gradient(ellipse at center,var(--brass) 0 2px,transparent 2.5px),
+ linear-gradient(90deg,transparent 0 12%,var(--brass-light) 12% 88%,transparent 88%);
+ background-size:12px 12px,100% 1px;background-position:center,center;background-repeat:no-repeat;
+}
+.service-card{position:relative}
+.service-card:after{
+ content:"";position:absolute;right:15px;top:14px;width:23px;height:23px;
+ border:1px solid rgba(177,138,85,.38);border-radius:50%;
+}
+.service-icon{background:#f2e5df;color:#a47c49;border:1px solid rgba(177,138,85,.25)}
+.calendar-week span{background:#486f64}
+.agenda-month button{border-color:#d9c6aa;color:#8c6840;background:#fffaf4}
+.agenda-day.has-event{background:#fff1ed;border-color:#d9b4a8}
+.agenda-day.is-selected{outline-color:#a47c49}
+.agenda-day em{background:#f5e5e1;color:#713541}
+.button{background:linear-gradient(135deg,#713541,#8b4c54);border:1px solid rgba(177,138,85,.38);box-shadow:0 5px 14px rgba(91,51,57,.16)}
+.button:hover{background:linear-gradient(135deg,#3f6c62,#557f72)}
+.space-section{background:linear-gradient(120deg,#344f49,#52796d)}
+.space-stamp{border:1px solid var(--brass-light);color:#e5cba4}
+.space-stamp strong{color:#fff3df}
+.contact-item span{color:#a47c49}
+.past-card,.service-card,.agenda-calendar,.agenda-detail{border-color:#e3d2bd}
+.past-card h4{color:#713541}
+footer{background:linear-gradient(110deg,#eee2d5,#f5e9e1);border-top:1px solid #d9c4a9}
+.footer-logo{filter:drop-shadow(0 2px 2px rgba(87,59,45,.08))}
+@media(min-width:900px){
+ .hero{min-height:590px}
+ .hero-content{max-width:760px}
+ .hero-content:before{left:-82px;top:35px}
+ .hero-content:after{right:-78px;bottom:38px}
+}
+@media(max-width:650px){
+ .hero-content:before{left:-10px;top:5px;font-size:2rem}
+ .hero-content:after{right:-8px;bottom:5px;font-size:2rem}
+}
