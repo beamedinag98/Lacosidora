@@ -9,7 +9,7 @@ const workshops = {
 };
 const calendar = document.getElementById("course-calendar");
 if (calendar) {
-  const fields = {date:document.getElementById("course-date"),name:document.getElementById("course-name"),intro:document.getElementById("course-intro"),steps:document.getElementById("course-steps"),time:document.getElementById("course-time"),duration:document.getElementById("course-duration"),price:document.getElementById("course-price"),spots:document.getElementById("course-spots"),contact:document.getElementById("course-contact")};
+  const fields = {status:document.getElementById("course-status"),date:document.getElementById("course-date"),name:document.getElementById("course-name"),intro:document.getElementById("course-intro"),steps:document.getElementById("course-steps"),time:document.getElementById("course-time"),duration:document.getElementById("course-duration"),price:document.getElementById("course-price"),spots:document.getElementById("course-spots"),contact:document.getElementById("course-contact")};
   const selectDay = day => {
     const item = workshops[day];
     if (!item) return;
@@ -18,7 +18,7 @@ if (calendar) {
       button.classList.toggle("selected",active);
       button.setAttribute("aria-pressed",String(active));
     });
-    fields.date.textContent = item.date + (item.past ? " · Taller realizado" : "");
+    fields.date.textContent = item.date;\n    fields.status.textContent = item.past ? "Taller realizado" : "Próximo taller";
     fields.name.textContent = item.name;
     fields.intro.textContent = item.intro;
     fields.steps.replaceChildren(...item.steps.map(step => {const li=document.createElement("li");li.textContent=step;return li;}));
@@ -27,12 +27,12 @@ if (calendar) {
     fields.price.textContent = item.price;
     fields.spots.textContent = item.spots;
     if (item.past) {
-      fields.contact.textContent = "Taller realizado";
+      fields.contact.textContent = "Actividad realizada";
       fields.contact.removeAttribute("href");
       fields.contact.classList.add("button-disabled");
       fields.contact.setAttribute("aria-disabled","true");
     } else {
-      fields.contact.textContent = "Reservar por WhatsApp";
+      fields.contact.textContent = "Consultar / reservar plaza";
       fields.contact.href = "https://wa.me/34676435554?text=" + encodeURIComponent("Hola, quiero información sobre el " + item.name + " del " + item.date + ".");
       fields.contact.classList.remove("button-disabled");
       fields.contact.removeAttribute("aria-disabled");
