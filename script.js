@@ -90,6 +90,28 @@ document.addEventListener("DOMContentLoaded", () => {
     shown = new Date(shown.getFullYear(), shown.getMonth()+1, 1);
     render(); detailLive.hidden = true; detailEmpty.hidden = false;
   });
+  const pageLinks = document.querySelectorAll("[data-page-link]");
+  function activatePage(page, updateHash = true) {
+    document.body.dataset.page = page;
+    pageLinks.forEach(link => {
+      const active = link.dataset.pageLink === page;
+      link.classList.toggle("active", active);
+      if (active) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
+    });
+    if (updateHash) {
+      const target = {home:"#inicio",services:"#servicios",courses:"#cursos",space:"#espacio"}[page] || "#inicio";
+      history.replaceState(null, "", target);
+    }
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+  pageLinks.forEach(link => link.addEventListener("click", event => {
+    event.preventDefault();
+    activatePage(link.dataset.pageLink);
+  }));
+  const initialHash = location.hash;
+  const initialPage = initialHash === "#servicios" ? "services" : initialHash === "#cursos" ? "courses" : initialHash === "#espacio" || initialHash === "#contacto" ? "space" : "home";
+  activatePage(initialPage, false);
   render();
   show(workshops["2026-11-14"]);
 });
