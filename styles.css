@@ -21,3 +21,11 @@
 .adult-sewing{margin:64px auto 10px;padding:42px 36px;background:#fff8f2;border:1px solid #ead9ce;border-radius:22px;text-align:center}.adult-sewing .section-heading{max-width:760px;margin:0 auto 24px}.adult-sewing h3{font:600 clamp(1.8rem,3vw,2.5rem) "Playfair Display",serif;color:#547c70}.adult-course-grid{display:grid;grid-template-columns:repeat(2,minmax(0,240px));justify-content:center;gap:16px;margin:25px auto}.adult-course-grid article{padding:22px;background:#fff;border:1px solid #ead9ce;border-radius:14px}.adult-course-grid span{display:block;color:#b65f68;font-size:.75rem;letter-spacing:.08em;font-weight:700}.adult-course-grid strong{display:block;margin:8px;color:#547c70;font:700 2.2rem "Playfair Display",serif}.adult-course-grid p{margin:0}.adult-course-notes{max-width:800px;margin:24px auto;text-align:left;line-height:1.7}.adult-course-notes p{margin:9px 0}.adult-sewing>.button{display:inline-block}
 .agenda-day.has-event{position:relative}.agenda-day.has-event:before{content:"";display:block;width:42px;height:35px;margin:0 auto 5px;background:#f0d5cc;border-radius:50% 50% 45% 45%;opacity:.85}.agenda-day[data-event="pumpkin"]:before{content:"🎃";display:grid;place-items:center;background:transparent;font-size:29px;width:42px;height:34px}.agenda-day[data-event="tote"]:before{content:"👜";display:grid;place-items:center;background:transparent;font-size:27px;width:42px;height:34px}.agenda-day[data-event="decoupage"]:before{content:"🍽️";display:grid;place-items:center;background:transparent;font-size:27px;width:42px;height:34px}.agenda-day[data-event="navidad"]:before{content:"🎄";display:grid;place-items:center;background:transparent;font-size:27px;width:42px;height:34px}
 @media(max-width:650px){.adult-sewing{padding:28px 18px}.adult-course-grid{grid-template-columns:1fr 1fr}.adult-course-grid strong{font-size:1.8rem}}
+
+/* Miniaturas ilustradas reales dentro de cada fecha del calendario */
+.agenda-day.has-event:before{display:none!important;content:none!important}
+.agenda-thumb{display:block;width:58px;height:43px;object-fit:contain;margin:2px auto 5px;border-radius:7px}
+.agenda-day em{margin-top:2px;min-height:2.1em}
+.detail-photo{height:230px}
+.detail-photo img{object-fit:contain;background:#fffaf4}
+@media(max-width:650px){.agenda-thumb{width:42px;height:32px;margin:0 auto 3px}.agenda-day em{font-size:.61rem}}
