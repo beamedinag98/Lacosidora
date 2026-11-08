@@ -29,3 +29,62 @@
 .detail-photo{height:230px}
 .detail-photo img{object-fit:contain;background:#fffaf4}
 @media(max-width:650px){.agenda-thumb{width:42px;height:32px;margin:0 auto 3px}.agenda-day em{font-size:.61rem}}
+
+/* Ajustes finales: cabecera centrada y calendario mensual visible */
+.site-header{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:18px 22px 16px}
+.site-header .brand{display:flex;justify-content:center;align-items:center;width:min(360px,82vw);margin:0 auto}
+.site-header .brand img{width:100%;max-height:118px;object-fit:contain}
+.site-header nav{justify-content:center;width:100%;gap:clamp(14px,2.6vw,32px)}
+.agenda{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);gap:24px;align-items:start}
+.agenda-calendar,.agenda-detail{background:#fff;border:1px solid var(--line);padding:22px;box-shadow:0 10px 28px rgba(91,49,53,.05)}
+.agenda-month{display:flex;justify-content:space-between;align-items:center;text-align:center;margin-bottom:18px}
+.agenda-month>div{display:flex;flex-direction:column}
+.agenda-month strong{font:600 1.55rem "Playfair Display",serif;color:var(--wine)}
+.agenda-month small{font-size:.72rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.agenda-month button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--wine);font-size:1.6rem;cursor:pointer}
+.agenda-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
+.agenda-week{margin-bottom:5px}
+.agenda-week span{text-align:center;padding:8px 1px;background:var(--teal);color:#fff;font-size:.68rem;font-weight:700}
+.agenda-day,.agenda-blank{min-width:0;min-height:88px}
+.agenda-day{border:1px solid var(--line);background:#fffdfb;padding:5px 3px;color:var(--ink);font:600 .86rem "DM Sans",sans-serif;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+button.agenda-day{cursor:pointer}
+.agenda-day.has-event{background:#fff0f1;border-color:#e6b8bd}
+.agenda-day.is-past{background:#f6f1ec}
+.agenda-number{align-self:flex-start;padding-left:4px;font-size:.75rem}
+.agenda-thumb{display:block;width:100%;height:43px;max-width:66px;object-fit:contain;margin:0 auto 2px}
+.agenda-day em{font-style:normal;font-size:.59rem;line-height:1.15;color:var(--wine);font-weight:700}
+.agenda-key{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:.74rem;color:var(--muted)}
+.agenda-detail{background:var(--cream);min-height:300px}
+.detail-empty{padding:25px 10px;text-align:center}
+.detail-empty h3,.detail-description h3{font-size:1.8rem;color:var(--wine);margin:0 0 10px}
+.detail-empty p,.detail-description>p:not(.eyebrow){color:var(--muted)}
+.detail-head{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--wine);font-weight:700;margin-bottom:16px}
+.detail-status{font-size:.72rem;color:var(--teal);text-transform:uppercase;letter-spacing:.08em}
+.detail-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(140px,.8fr);gap:18px}
+.detail-description h4{color:var(--teal);margin:18px 0 6px}
+.detail-description ul{padding-left:20px;margin:0}
+.detail-photo{margin-bottom:12px;background:#fff;border:1px solid var(--line);padding:8px}
+.detail-photo img{display:block;width:100%;height:170px;object-fit:contain}
+.detail-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.detail-facts>div{background:#fff;padding:10px;border:1px solid var(--line)}
+.detail-facts small{display:block;color:var(--rose-dark);font-size:.65rem;text-transform:uppercase;font-weight:700}
+.detail-facts strong{display:block;color:var(--wine);font-size:.9rem}
+.detail-footer{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.detail-footer p{font-size:.8rem;color:var(--muted)}
+.adult-sewing,.past-workshops{margin-top:58px;padding:34px;background:#fff9f7;border:1px solid var(--line)}
+.adult-course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:600px;margin:20px auto}
+.adult-course-grid article{padding:20px;background:#fff;border:1px solid var(--line);text-align:center}
+.adult-course-grid span,.adult-course-grid strong{display:block;color:var(--wine)}
+.adult-course-grid strong{font:600 2rem "Playfair Display",serif}
+.adult-course-notes{max-width:850px;margin:0 auto 20px}
+.past-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.past-card{background:#fff;border:1px solid var(--line);overflow:hidden}
+.past-photo{height:190px;background-size:cover;background-position:center}
+.past-photo-together{background-image:url("assets/taller-manana-juntos.jpg")}
+.past-photo-designers{background-image:url("assets/pequenos-disenadores.jpg")}
+.past-photo-pumpkins{background-image:url("assets/taller-calabazas.jpg")}
+.past-copy{padding:18px}
+.past-copy h4{color:var(--wine);margin:0 0 8px;font-family:"Playfair Display",serif;font-size:1.25rem}
+.past-copy p{font-size:.88rem;color:var(--muted);margin:0}
+@media(max-width:850px){.agenda{grid-template-columns:1fr}.past-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.site-header nav{gap:9px 15px}.site-header nav a{font-size:.76rem}.agenda-calendar,.agenda-detail{padding:12px}.agenda-day,.agenda-blank{min-height:70px}.agenda-thumb{height:34px;max-width:48px}.agenda-day em{font-size:.5rem}.agenda-week span{font-size:.58rem}.detail-main{grid-template-columns:1fr}.detail-meta{display:grid;grid-template-columns:1fr}.past-grid{grid-template-columns:1fr}.adult-sewing,.past-workshops{padding:20px 14px}}
