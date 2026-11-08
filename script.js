@@ -19,7 +19,7 @@ if(calendar){
   for(let i=0;i<first;i++){const blank=document.createElement("span");blank.className="agenda-blank";calendar.append(blank);}
   for(let d=1;d<=days;d++){
    const key=keyFor(y,m,d),item=workshops[key],b=document.createElement("button");b.type="button";b.className="agenda-day";b.textContent=d;
-   if(item){b.classList.add("has-event");if(item.past)b.classList.add("is-past");const em=document.createElement("em");em.textContent=item.name.replace("Taller de ","");b.append(em);}
+   if(item){b.classList.add("has-event");if(item.past)b.classList.add("is-past");b.dataset.event=key==="2026-11-14"?"tote":key==="2026-11-21"?"decoupage":key==="2026-11-28"?"navidad":"pumpkin";const em=document.createElement("em");em.textContent=item.name.replace("Taller de ","");b.append(em);}
    if(selected===key)b.classList.add("is-selected");
    b.setAttribute("aria-label",item?d+" de "+monthNames[m]+": "+item.name:d+" de "+monthNames[m]);
    b.addEventListener("click",()=>{if(item){selected=key;render();show(item,key);}else{selected=null;render();detailLive.hidden=true;detailEmpty.hidden=false;}});
