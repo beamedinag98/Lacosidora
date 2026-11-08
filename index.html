@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#fbf5f2">
 <title>La Cosidora | Arreglos, mercería y costura en Santa Pola</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=5">
 <style>.brand img{display:block;width:min(220px,42vw);height:auto;max-height:92px;object-fit:contain}.brand{display:flex;align-items:center}.footer-logo{display:block;width:min(180px,60vw);height:auto;margin:0 auto 1rem}</style>
 </head>
 <body>
@@ -22,40 +22,32 @@
 <article class="service-card"><span class="service-icon">♡</span><h3>Cursos y talleres</h3><p>Aprende, practica y disfruta de la costura en nuestros cursos y talleres para distintas edades y niveles.</p></article>
 <article class="service-card"><span class="service-icon">✧</span><h3>Personalizados</h3><p>Detalles y creaciones personalizadas para regalar o hacer especial algo cotidiano.</p></article></div></section>
 <section class="courses section-wrap" id="cursos">
-  <div class="section-heading"><p class="eyebrow">La agenda creativa</p><h2>Calendario de <em>talleres</em></h2><p>Consulta las fechas y pulsa en cualquier taller para ver todos los detalles.</p></div>
-  <div class="workshop-board">
-    <div class="calendar-wrap">
-      <div class="calendar-title"><button type="button" class="month-arrow" aria-label="Mes anterior" disabled>‹</button><div><strong>Noviembre 2026</strong><span>La Cosidora · Santa Pola</span></div><button type="button" class="month-arrow" aria-label="Mes siguiente" disabled>›</button></div>
-      <div class="calendar-grid calendar-weekdays"><span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span></div>
-      <div class="calendar-grid" id="course-calendar">
-        <span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span><span class="calendar-empty"></span>
-        <button class="calendar-day" type="button" data-day="1">1</button>
-        <button class="calendar-day" type="button" data-day="2">2</button><button class="calendar-day" type="button" data-day="3">3</button><button class="calendar-day" type="button" data-day="4">4</button><button class="calendar-day" type="button" data-day="5">5</button>
-        <button class="calendar-day past has-course" type="button" data-day="6">6<span>Calabazas</span></button><button class="calendar-day past has-course" type="button" data-day="7">7<span>Calabazas</span></button><button class="calendar-day" type="button" data-day="8">8</button>
-        <button class="calendar-day" type="button" data-day="9">9</button><button class="calendar-day" type="button" data-day="10">10</button><button class="calendar-day" type="button" data-day="11">11</button><button class="calendar-day" type="button" data-day="12">12</button><button class="calendar-day" type="button" data-day="13">13</button>
-        <button class="calendar-day has-course selected" type="button" data-day="14" aria-pressed="true">14<span>Tote bag</span></button><button class="calendar-day" type="button" data-day="15">15</button>
-        <button class="calendar-day" type="button" data-day="16">16</button><button class="calendar-day" type="button" data-day="17">17</button><button class="calendar-day" type="button" data-day="18">18</button><button class="calendar-day" type="button" data-day="19">19</button><button class="calendar-day" type="button" data-day="20">20</button>
-        <button class="calendar-day has-course" type="button" data-day="21">21<span>Decoupage</span></button><button class="calendar-day" type="button" data-day="22">22</button>
-        <button class="calendar-day" type="button" data-day="23">23</button><button class="calendar-day" type="button" data-day="24">24</button><button class="calendar-day" type="button" data-day="25">25</button><button class="calendar-day" type="button" data-day="26">26</button><button class="calendar-day" type="button" data-day="27">27</button>
-        <button class="calendar-day has-course" type="button" data-day="28">28<span>Árboles navideños</span></button><button class="calendar-day" type="button" data-day="29">29</button>
-        <button class="calendar-day" type="button" data-day="30">30</button>
-      </div>
-      <div class="calendar-legend"><span><i></i> Taller programado</span><span><i class="done"></i> Ya realizado</span></div>
-    </div>
-    <article class="course-detail" id="course-detail" aria-live="polite">
-      <div class="detail-topline"><span id="course-date">Sábado 14 de noviembre</span><span class="detail-tag" id="course-status">Próximo taller</span></div>
-      <div class="detail-content"><div class="detail-copy"><p class="eyebrow">En La Cosidora</p><h3 id="course-name">Taller de tote bag</h3><p id="course-intro">Crea una bolsa de tela única y totalmente a tu estilo.</p><h4>En este taller...</h4><ul id="course-steps"><li>Elegir la tela que más te guste.</li><li>Cortar las piezas con el patrón.</li><li>Coser a máquina.</li><li>Remallar los bordes.</li><li>Decorar con pegatinas vinílicas.</li></ul></div><div class="detail-side"><div class="detail-photo" id="course-photo"><span>Un espacio para crear<br>con tus propias manos</span></div><div class="course-facts"><div><span>Horario</span><strong id="course-time">10:00–13:00</strong></div><div><span>Duración</span><strong id="course-duration">3 horas</strong></div><div><span>Precio</span><strong id="course-price">50 €</strong></div><div><span>Plazas</span><strong id="course-spots">2</strong></div></div></div></div>
-      <div class="detail-bottom"><p class="course-note">Materiales incluidos. Reserva con el 50 % del importe; el resto se abona el día del taller.</p><a class="button" id="course-contact" href="https://wa.me/34676435554" target="_blank" rel="noopener">Consultar / reservar plaza</a></div>
-    </article>
+ <div class="section-heading"><p class="eyebrow">Agenda creativa</p><h2>Calendario de <em>talleres</em></h2><p>Elige una fecha marcada para descubrir el taller, ver qué haremos y consultar todos los detalles.</p></div>
+ <div class="agenda">
+  <div class="agenda-calendar">
+   <div class="agenda-month"><button id="month-prev" aria-label="Mes anterior">‹</button><div><strong id="month-label">Noviembre 2026</strong><small>La Cosidora · Santa Pola</small></div><button id="month-next" aria-label="Mes siguiente">›</button></div>
+   <div class="agenda-grid agenda-week"><span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span><span>DOM</span></div>
+   <div class="agenda-grid" id="course-calendar"></div>
+   <div class="agenda-key"><span><i></i> Taller con fecha</span><span><i class="past-dot"></i> Fecha pasada</span></div>
   </div>
-  <div class="past-workshops"><div class="past-heading"><p class="eyebrow">Así lo pasamos</p><h3>Otros talleres que hemos disfrutado</h3><p>Un pequeño recuerdo de las actividades que hacemos en La Cosidora.</p></div>
-    <div class="past-grid">
-      <article class="past-card"><div class="past-image past-image-one"></div><div><h4>Una mañana juntos</h4><p>Una experiencia para compartir entre niñas y un adulto acompañante: padre, madre o tutor legal. Una mañana para aprender, coser y crear en compañía.</p></div></article>
-      <article class="past-card"><div class="past-image past-image-two"></div><div><h4>Pequeños diseñadores</h4><p>Un curso infantil de una semana, todas las tardes, en el que los niños diseñaron y confeccionaron su propia tote bag de principio a fin.</p></div></article>
-      <article class="past-card"><div class="past-image past-image-three"></div><div><h4>Taller de calabazas</h4><p>Una sesión creativa para elegir telas, coser, rellenar y decorar calabazas de tela con detalles otoñales.</p></div></article>
+  <article class="agenda-detail" id="course-detail" aria-live="polite">
+   <div class="detail-empty"><span class="eyebrow">Tu próximo plan creativo</span><h3>Selecciona un taller en el calendario</h3><p>Al pulsar una fecha señalada aparecerán aquí las fotografías y toda la información del curso.</p></div>
+   <div class="detail-live" hidden>
+    <div class="detail-head"><span id="course-date"></span><span id="course-status" class="detail-status"></span></div>
+    <div class="detail-main"><div class="detail-description"><p class="eyebrow">Taller en La Cosidora</p><h3 id="course-name"></h3><p id="course-intro"></p><h4>¿Qué haremos?</h4><ul id="course-steps"></ul></div>
+     <div class="detail-meta"><div class="detail-photo" id="course-photo" hidden><img id="course-photo-img" alt=""></div><div class="detail-facts"><div><small>Horario</small><strong id="course-time"></strong></div><div><small>Duración</small><strong id="course-duration"></strong></div><div><small>Precio</small><strong id="course-price"></strong></div><div><small>Plazas</small><strong id="course-spots"></strong></div></div></div>
     </div>
+    <div class="detail-footer"><p id="course-note">Materiales incluidos. Reserva con el 50 % del importe; el resto se abona el día del taller.</p><a id="course-contact" class="button" target="_blank" rel="noopener">Consultar / reservar</a></div>
+   </div>
+  </article>
+ </div>
+ <div class="past-workshops"><div class="past-title"><p class="eyebrow">Momentos compartidos</p><h3>Talleres que ya hemos vivido</h3><p>Así son algunas de las experiencias creativas que organizamos.</p></div>
+  <div class="past-grid">
+   <article class="past-card"><div class="past-photo past-photo-together" role="img" aria-label="Taller de costura compartido por niñas y una persona adulta"></div><div class="past-copy"><h4>Una mañana juntos</h4><p>Un taller para disfrutar de la costura en compañía. Las niñas participan junto a una persona adulta acompañante: su padre, madre o tutor legal. Una mañana para aprender y crear juntos.</p></div></article>
+   <article class="past-card"><div class="past-photo past-photo-designers" role="img" aria-label="Curso infantil de pequeños diseñadores"></div><div class="past-copy"><h4>Pequeños diseñadores</h4><p>Un curso infantil de una semana, todas las tardes. Los niños trabajaron de forma autónoma y confeccionaron su propia tote bag, desde la elección de la tela hasta los últimos detalles.</p></div></article>
+   <article class="past-card"><div class="past-photo past-photo-pumpkins" role="img" aria-label="Taller de creación de calabazas de tela"></div><div class="past-copy"><h4>Taller de calabazas</h4><p>Una sesión de costura creativa para elegir telas, cortar patrones, coser, rellenar y decorar calabazas de tela con detalles otoñales.</p></div></article>
   </div>
-  <p class="course-cancel">Plazas limitadas. Para reservar, escríbenos por WhatsApp o Instagram. Si La Cosidora cancela el taller, se devolverá el importe de la reserva.</p>
+ </div>
 </section>
 <section class="space-section" id="espacio"><div class="space-inner"><div><p class="eyebrow">Un espacio para tus ideas</p><h2>¿Necesitas un lugar para impartir tu curso o taller?</h2><p>En La Cosidora también puedes alquilar un espacio por horas para desarrollar tus clases, talleres y actividades.</p><a class="button button-light" href="https://wa.me/34676435554?text=Hola%2C%20me%20gustar%C3%ADa%20informarme%20sobre%20el%20alquiler%20del%20espacio%20por%20horas." target="_blank" rel="noopener">Consultar disponibilidad</a></div><div class="space-stamp"><span>Tu taller</span><strong>tu<br>espacio</strong><span>por horas</span></div></div></section>
 <section class="contact section-wrap" id="contacto"><div class="section-heading"><p class="eyebrow">Ven a conocernos</p><h2>Estamos en Santa Pola</h2><p>¿Tienes una consulta, quieres apuntarte a un curso o necesitas más información? Estaremos encantados de atenderte.</p></div><div class="contact-grid">
