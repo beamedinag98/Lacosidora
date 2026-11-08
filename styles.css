@@ -329,3 +329,7 @@ body{background-image:none!important;background-color:#fbf5ec}
 .services,.courses,.agenda-calendar,.adult-sewing,.past-workshops,.contact,
 .service-card{background-image:none!important}
 .site-header .brand img,.footer-logo{mix-blend-mode:normal!important}
+
+
+/* El logo original conserva su fondo blanco; el soporte coincide con él. */
+.site-header .brand img,.footer-logo{background-color:#fff!important;mix-blend-mode:normal!important}
