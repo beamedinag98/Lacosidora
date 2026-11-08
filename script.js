@@ -114,4 +114,42 @@ document.addEventListener("DOMContentLoaded", () => {
   activatePage(initialPage, false);
   render();
   show(workshops["2026-11-14"]);
+
+  // Servicios: mostrar la información dentro de esta misma página.
+  const serviceInfo = {
+    arreglos: {title:"Arreglos y transformaciones",copy:"Damos una segunda vida a tus prendas con arreglos y transformaciones. Cuéntanos qué necesitas y consúltanos para valorar tu prenda."},
+    merceria: {title:"Mercería",copy:"En La Cosidora encontrarás materiales y pequeños imprescindibles para tus labores, reparaciones y proyectos de costura. Si buscas algo concreto, pregúntanos."},
+    maquinas: {title:"Reparación de máquinas de coser",copy:"Te ayudamos con la reparación de máquinas de coser. Escríbenos y cuéntanos qué modelo tienes y qué problema presenta para informarte."},
+    cursos: {title:"Cursos y talleres",copy:"Tenemos propuestas para aprender, practicar y disfrutar de la costura, con cursos para adultos y talleres creativos. Consulta las próximas fechas y opciones en el apartado Talleres y cursos."},
+    personalizados: {title:"Productos personalizados",copy:"Creamos detalles personalizados para regalar o para dar un toque especial a tus cosas. Cuéntanos tu idea y hablamos de las posibilidades."}
+  };
+  const serviceButtons = document.querySelectorAll(".service-choice");
+  const servicePanel = document.getElementById("service-detail");
+  if (serviceButtons.length && servicePanel) {
+    const serviceTitle = document.getElementById("service-detail-title");
+    const serviceCopy = document.getElementById("service-detail-copy");
+    const serviceContact = document.getElementById("service-detail-contact");
+    serviceButtons.forEach(button => button.addEventListener("click", () => {
+      const info = serviceInfo[button.dataset.service];
+      if (!info) return;
+      serviceButtons.forEach(choice => {
+        const selected = choice === button;
+        choice.classList.toggle("is-selected", selected);
+        choice.setAttribute("aria-expanded", String(selected));
+      });
+      serviceTitle.textContent = info.title;
+      serviceCopy.textContent = info.copy;
+      serviceContact.href = "https://wa.me/34676435554?text=" + encodeURIComponent("Hola, quiero información sobre " + info.title + ".");
+      servicePanel.hidden = false;
+      servicePanel.scrollIntoView({behavior:"smooth",block:"nearest"});
+    }));
+    servicePanel.querySelector(".service-detail-close").addEventListener("click", () => {
+      servicePanel.hidden = true;
+      serviceButtons.forEach(button => {
+        button.classList.remove("is-selected");
+        button.setAttribute("aria-expanded","false");
+      });
+    });
+  }
+
 });
