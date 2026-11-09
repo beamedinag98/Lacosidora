@@ -77,9 +77,9 @@ button.agenda-day{cursor:pointer}
 .adult-course-grid span,.adult-course-grid strong{display:block;color:var(--wine)}
 .adult-course-grid strong{font:600 2rem "Playfair Display",serif}
 .adult-course-notes{max-width:850px;margin:0 auto 20px}
-.past-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.past-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
 .past-card{background:#fff;border:1px solid var(--line);overflow:hidden}
-.past-photo{height:190px;background-size:cover;background-position:center}
+.past-photo{height:260px;min-height:260px;background-size:cover;background-position:center center;background-repeat:no-repeat;overflow:hidden;transform:translateZ(0)}
 .past-photo-together{background-image:url("assets/taller-manana-juntos.jpg")}
 .past-photo-designers{background-image:url("assets/pequenos-disenadores.jpg")}
 .past-photo-pumpkins{background-image:url("assets/taller-calabazas.jpg")}
@@ -375,3 +375,5 @@ body{background-image:none!important;background-color:#fbf5ec}
 .site-header .brand{background:#fff!important;padding:6px 12px;border-radius:0}
 .site-header .brand img,.footer-logo{background:#fff!important;display:block}
 footer{background:#fff!important}
+
+@media(max-width:760px){.past-grid{grid-template-columns:1fr}.past-photo{height:auto;min-height:0;aspect-ratio:4/3;background-position:center}}
