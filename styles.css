@@ -368,3 +368,10 @@ body{background-image:none!important;background-color:#fbf5ec}
   outline:3px solid var(--teal);outline-offset:3px;
 }
 @media(max-width:650px){.service-detail{padding:23px 18px;gap:12px}}
+
+
+/* Fondo blanco uniforme para integrar el logotipo sin que se note el rectángulo de la imagen. */
+.site-header{background:#fff!important}
+.site-header .brand{background:#fff!important;padding:6px 12px;border-radius:0}
+.site-header .brand img,.footer-logo{background:#fff!important;display:block}
+footer{background:#fff!important}
