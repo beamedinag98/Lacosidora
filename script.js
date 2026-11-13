@@ -13,6 +13,44 @@ document.addEventListener("DOMContentLoaded", () => {
     "2026-11-28": {date:"Sábado 28 de noviembre",name:"Taller de árboles de Navidad",intro:"Crea tu propio árbol de tela y decóralo con todo tu estilo.",steps:["Elegir la tela que más te guste.","Recortar las piezas con el patrón.","Coser a máquina.","Rellenar el árbol.","Decorar con lazos, botones, cintas y otros detalles."],time:"10:00–13:00",duration:"3 horas",price:"40 €",spots:"Máximo 5 plazas",image:"assets/arboles-navidad.svg"}
   };
 
+  // Servicios: este bloque debe ejecutarse también en servicios.html,
+  // que no contiene el calendario de cursos.
+  const serviceInfoEarly = {
+    arreglos: {title:"Arreglos y transformaciones",copy:"En La Cosidora realizamos todo tipo de arreglos y transformaciones de ropa: bajos de pantalones, cambios de cremalleras, ajustes de cintura, estrechar o ensanchar prendas y mucho más. También trabajamos con vestidos de fiesta y de quinceañera, y estamos especializadas en arreglos de uniformes escolares y uniformes profesionales, como los del Ejército de Tierra, la Armada, la Policía y la Guardia Civil. Además, arreglamos cortinas, cojines y otros textiles del hogar. ¿Tienes una prenda especial o un arreglo en mente? Cuéntanoslo y lo valoramos contigo. No confeccionamos prendas desde cero. Si tienes dudas sobre algún trabajo, consúltanos por WhatsApp."},
+    merceria: {title:"Mercería",copy:"En nuestra mercería encontrarás todo tipo de artículos para tus labores y proyectos de costura: elásticos de varios anchos, cinta elástica Melograno en una gran variedad de colores, botones, cremalleras, hilos de costura y de torzal, agujas, pegamento para tela, puntillas, bies y accesorios de corsetería. También disponemos de retales de telas y de artículos de mercería para la confección y los detalles de los trajes de las fiestas de Moros y Cristianos. Si buscas algo concreto, consúltanos y te ayudaremos a encontrarlo."},
+    maquinas: {title:"Reparación de máquinas de coser",copy:"Reparamos todo tipo de máquinas de coser y trabajamos con todas las marcas. Estamos especialmente acostumbrados a trabajar con máquinas domésticas, aunque puedes consultarnos por cualquier otro tipo de máquina. Para realizar la reparación, es necesario traer la máquina a nuestra tienda; no ofrecemos servicio a domicilio. Si quieres, antes de venir puedes enviarnos un WhatsApp para contarnos qué máquina tienes y qué le ocurre."},
+    cursos: {title:"Cursos y talleres",copy:"¿Te gustaría aprender a coser desde cero? Nuestro curso está disponible durante todo el año y las clases son individuales, para que avances a tu propio ritmo y recibas atención personalizada. No seguimos un programa cerrado: tú decides qué quieres aprender y adaptamos las clases a tus necesidades e intereses. Puedes iniciarte en el uso de la máquina de coser, aprender a realizar pequeños arreglos del día a día o practicar proyectos sencillos. Puedes traer tu propia máquina; y si todavía no tienes una, no te preocupes: en La Cosidora disponemos de máquinas para que puedas aprender. En este curso no enseñamos a crear patrones. Sin embargo, sí puedes confeccionar prendas desde cero si traes tu propio patrón o utilizas uno del que dispongamos en La Cosidora. Además, organizamos talleres especiales y creativos a lo largo del año, normalmente en sábados y siempre con fechas concretas. Consulta el calendario del apartado Talleres y cursos para descubrir las próximas propuestas."},
+    personalizados: {title:"Productos personalizados",copy:"Personalizamos prendas de ropa y complementos mediante personalización textil. Puedes traer tu idea para personalizar camisetas y otras prendas, tazas, gorras, bolsos y mucho más. También creamos diseños y piezas personalizadas para maquetas y proyectos especiales, como pequeños elementos o detalles hechos a medida. Y si todavía no tienes un diseño pensado, podemos crearlo contigo: damos forma a tu idea para conseguir algo único y a tu gusto. Cuéntanos qué te gustaría personalizar o crear y lo diseñamos juntos."}
+  };
+  const serviceButtonsEarly = document.querySelectorAll(".service-choice");
+  const servicePanelEarly = document.getElementById("service-detail");
+  if (serviceButtonsEarly.length && servicePanelEarly) {
+    const title = document.getElementById("service-detail-title");
+    const copy = document.getElementById("service-detail-copy");
+    const contact = document.getElementById("service-detail-contact");
+    serviceButtonsEarly.forEach(button => button.addEventListener("click", () => {
+      const info = serviceInfoEarly[button.dataset.service];
+      if (!info) return;
+      serviceButtonsEarly.forEach(choice => {
+        const selected = choice === button;
+        choice.classList.toggle("is-selected", selected);
+        choice.setAttribute("aria-expanded", String(selected));
+      });
+      title.textContent = info.title;
+      copy.textContent = info.copy;
+      contact.href = "https://wa.me/34676435554?text=" + encodeURIComponent("Hola, quiero información sobre " + info.title + ".");
+      servicePanelEarly.hidden = false;
+      servicePanelEarly.scrollIntoView({behavior:"smooth",block:"nearest"});
+    }));
+    servicePanelEarly.querySelector(".service-detail-close").addEventListener("click", () => {
+      servicePanelEarly.hidden = true;
+      serviceButtonsEarly.forEach(button => {
+        button.classList.remove("is-selected");
+        button.setAttribute("aria-expanded","false");
+      });
+    });
+  }
+
   const calendar = document.getElementById("course-calendar");
   if (!calendar) return;
   let shown = new Date(2026, 10, 1);
