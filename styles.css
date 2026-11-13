@@ -377,3 +377,20 @@ body{background-image:none!important;background-color:#fbf5ec}
 footer{background:#fff!important}
 
 @media(max-width:760px){.past-grid{grid-template-columns:1fr}.past-photo{height:auto;min-height:0;aspect-ratio:4/3;background-position:center}}
+
+
+/* Fotografías de talleres: mostrar la imagen completa, sin filtros ni capas */
+.past-photo{
+  background-color:#fff!important;
+  background-size:contain!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+  height:auto!important;
+  min-height:0!important;
+  aspect-ratio:4/3;
+  image-rendering:auto;
+}
+.past-card{background:#fff}
+@media(max-width:760px){
+  .past-photo{aspect-ratio:4/3;height:auto!important;min-height:0!important}
+}
