@@ -450,3 +450,5 @@ nav a:hover{ text-decoration:underline;text-underline-offset:5px}
 .service-expanded p{color:var(--muted);margin:0}
 @media(max-width:900px){.home-link-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.page-intro{padding:55px 18px 25px}.home-link-grid,.service-expanded{grid-template-columns:1fr}.home-link-grid a{padding:20px}}
+
+.home-contact{text-align:center;padding:18px 20px 65px;background:var(--paper)}.home-contact p{font-family:"Playfair Display",serif;font-size:1.35rem;color:var(--wine);margin:0 0 14px}
