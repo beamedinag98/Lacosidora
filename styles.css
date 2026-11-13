@@ -89,26 +89,7 @@ button.agenda-day{cursor:pointer}
 @media(max-width:850px){.agenda{grid-template-columns:1fr}.past-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.site-header nav{gap:9px 15px}.site-header nav a{font-size:.76rem}.agenda-calendar,.agenda-detail{padding:12px}.agenda-day,.agenda-blank{min-height:70px}.agenda-thumb{height:34px;max-width:48px}.agenda-day em{font-size:.5rem}.agenda-week span{font-size:.58rem}.detail-main{grid-template-columns:1fr}.detail-meta{display:grid;grid-template-columns:1fr}.past-grid{grid-template-columns:1fr}.adult-sewing,.past-workshops{padding:20px 14px}}
 
-/* Navegacion por apartados: se muestra una sola pagina cada vez */
-body:not([data-page]){--active-page:home}
-main>section{display:none}
-body[data-page="home"] main>#inicio,
-body[data-page="home"] main>#intro,
-body[data-page="services"] main>#servicios,
-body[data-page="courses"] main>#cursos,
-body[data-page="space"] main>#espacio,
-body[data-page="space"] main>#contacto{display:block}
-.site-header{position:relative;z-index:5}
-.site-header nav a{padding:9px 13px;border-radius:24px;transition:background .2s,color .2s}
-.site-header nav a.active,.site-header nav a[aria-current="page"]{background:var(--teal);color:#fff}
-body[data-page="home"] main>#inicio{min-height:460px}
-body[data-page="services"] main>#servicios,
-body[data-page="courses"] main>#cursos,
-body[data-page="space"] main>#espacio,
-body[data-page="space"] main>#contacto{animation:page-in .25s ease both}
-@keyframes page-in{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:650px){.site-header nav{flex-wrap:wrap}.site-header nav a{padding:8px 10px}}
-
+/* Navegación entre páginas independientes: cada HTML muestra su propio contenido. */
 
 /* Identidad visual renovada: lino, tonos cálidos y detalles artesanales */
 :root{
