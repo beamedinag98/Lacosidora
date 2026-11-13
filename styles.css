@@ -394,3 +394,21 @@ footer{background:#fff!important}
 @media(max-width:760px){
   .past-photo{aspect-ratio:4/3;height:auto!important;min-height:0!important}
 }
+
+
+/* Historia del oficio y opiniones de clientes */
+.story-section{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(270px,.8fr);gap:clamp(35px,6vw,80px);align-items:center;padding-top:78px;padding-bottom:78px}
+.story-copy h2{max-width:650px}
+.story-copy>p:not(.eyebrow){color:var(--muted);font-size:.97rem}
+.story-signoff{font-family:"Playfair Display",serif;font-style:italic;color:var(--wine)!important;font-size:1.12rem!important;margin-top:24px}
+.story-timeline{position:relative;padding:24px 24px 24px 28px;background:#fffaf4;border:1px solid #e3d2bd;border-radius:14px}
+.story-timeline:before{content:"";position:absolute;left:48px;top:48px;bottom:48px;width:1px;background:#d8bd91}
+.timeline-item{position:relative;display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:start;padding:14px 0}
+.timeline-year{position:relative;z-index:1;display:grid;place-items:center;min-height:42px;padding:4px 6px;background:#fffaf4;border:1px solid #d8bd91;border-radius:22px;color:var(--wine);font:600 1rem "Playfair Display",serif;text-align:center}
+.timeline-item strong{display:block;color:var(--wine);font-size:.91rem;margin:2px 0 4px}
+.timeline-item p{margin:0;color:var(--muted);font-size:.83rem}
+.reviews-section{padding:72px 24px;text-align:center;background:#f5eee7;border-top:1px solid #e8d8c9;border-bottom:1px solid #e8d8c9}
+.reviews-inner{max-width:690px;margin:auto}
+.reviews-inner h2{margin-bottom:16px}
+.reviews-inner>p:not(.eyebrow){color:var(--muted);margin:0 auto 25px;max-width:600px}
+@media(max-width:760px){.story-section{grid-template-columns:1fr;padding-top:58px;padding-bottom:58px}.story-timeline{margin-top:4px}.reviews-section{padding:58px 20px}}
